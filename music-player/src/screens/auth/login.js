@@ -1,7 +1,7 @@
 import React from "react";
-import { loginEndPoint } from "../../spotify";
+import { loginEndpoint } from "../../spotify";
 
-import './login.css'
+import "./login.css";
 
 export default function Login() {
   return (
@@ -11,10 +11,10 @@ export default function Login() {
         alt="logo-spotify"
         className="logo"
       />
-      <a href={loginEndPoint}>
-        <div className="Login-btn">LOG IN</div>
+      <a href={loginEndpoint}>
+        <div className="login-btn">LOG IN</div>
       </a>
     </div>
   );
 }
- 
+
