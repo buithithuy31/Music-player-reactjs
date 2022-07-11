@@ -1,6 +1,5 @@
 import React from "react";
 import { loginEndpoint } from "../../spotify";
-
 import "./login.css";
 
 export default function Login() {
@@ -17,4 +16,3 @@ export default function Login() {
     </div>
   );
 }
-
