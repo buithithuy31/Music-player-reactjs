@@ -10,8 +10,10 @@ export default function Library() {
 
   useEffect(() => {
     APIKit.get("me/playlists").then(function (response) {
+      console.log(response.data)
       setPlaylists(response.data.items);
     });
+
   }, []);
 
   const navigate = useNavigate();
@@ -47,3 +49,13 @@ export default function Library() {
     </div>
   );
 }
+
+// import React, { useState } from "react";
+// import APIKit from "../../spotify";
+
+// export default function Library() {
+// APIKit.get("me/playlists").then(function (response) {
+//   console.log(response.data)
+// })
+//  return <div className="screen-container"></div>
+// }
