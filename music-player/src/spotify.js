@@ -1,16 +1,16 @@
 import axios from "axios";
 
 const authEndpoint = "https://accounts.spotify.com/authorize?";
-const clientId = "10ff71b2181a4ee19909431870ef03f4"; // //
+const clientId = "ced9a75c43114a14b906dfda8c3b19a2"; // //
 const redirectUri = "http://localhost:3000";
-const scopes = ["user-library-read", "playlist-read-private"];
+const scopes = ["playlist-read-private", "playlist-modify-private", "playlist-read-collaborative"];
 
 export const loginEndpoint = `${authEndpoint}client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join(
   "%20"
 )}&response_type=token&show_dialog=true`;
 
 const apiClient = axios.create({
-  baseURL: "	https://api.spotify.com/v1/me/playlists",
+  baseURL: "	https://api.spotify.com/v1/",
 });
 
 export const setClientToken = (token) => {
